@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Engineers &mdash; Website Template by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Muli:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+  <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/style.css">
+<!-- ############################################### -->
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    
+    <div class="header-top bg-light">
+<div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-lg-3">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Image" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-lg-3 d-none d-lg-block">
+
+            <div class="quick-contact-icons d-flex">
+              <div class="icon align-self-start">
+                <span class="flaticon-placeholder text-primary"></span>
+              </div>
+              <div class="text">
+                <span class="h4 d-block">Dhaka</span>
+                <span class="caption-text">all</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="quick-contact-icons d-flex">
+              <div class="icon align-self-start">
+                <span class="flaticon-call text-primary"></span>
+              </div>
+              <div class="text">
+                <span class="h4 d-block">01762469305</span>
+                <span class="caption-text">9am--6pm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="quick-contact-icons d-flex">
+              <div class="icon align-self-start">
+                <span class="flaticon-email text-primary"></span>
+              </div>
+              <div class="text">
+                <span class="h4 d-block">amanulla15-9880@diu.edu.bd</span>
+                <span class="caption-text">sobhanbag, dhanmondi 27</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 d-block d-lg-none text-right">
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+
+
+      
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+          
+          <div class="mr-auto">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                <li >
+                  <a href="/" class="nav-link text-left">Home</a>
+                </li>
+                
+                <li >
+                  <a href="/about" class="nav-link text-left">About Us</a>
+                </li>
+                    <li><a href="/contact" class="nav-link text-left">contact</a></li>
+                {{#if user}}
+                  <li ><a href="/users/logout" class="nav-link text-left">log Out</a></li>
+                <li>
+                {{else}}
+                <li ><a href="/login" class="nav-link text-left">log in</a></li>
+                <li class="active">
+                    <a href="/register" class="nav-link text-left">sign up</a>
+                </li>
+          {{/if}}
+              </ul>                                                                                                                                  
+            </nav>
+
+          </div>
+          
+         
+        </div>
+      </div>
+
+    </div>
+    
+    </div>
+    
+
+
+    <div class="site-section">
+        <div class="container">
+              <div id="main">
+            <!-- ******** Show error or success msg******* -->
+        <div class="row">
+        <div class="col-lg-12">
+
+
+            {{#if success_msg}}
+                <div class="alert alert-success">{{success_msg}}</div>
+            {{/if}}
+
+
+            {{#if error_msg}}
+                <div class="alert alert-danger">{{error_msg}}</div>
+            {{/if}}
+
+
+            {{#if error}}
+                <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+        </div>
+        </div>
+    </div>
+
+        <!-- Starting Form -->
+ <form class=" form-group" method="post" action="/users/register">
+                    <span class="login100-form-title p-b-59">
+                        Sign Up
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <span class="label-input100">Full Name</span>
+                        <input class="form-control" type="text" name="name" placeholder="Name...">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
+                        <span class="label-input100">Username</span>
+                        <input class="form-control" type="text" name="username" placeholder="Username...">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <span class="label-input100">Email</span>
+                        <input class="form-control" type="text" name="email" placeholder="Email addess...">
+                        <span class="focus-input100"></span>
+                    </div>
+                        <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Phone</span>
+                        <input class="form-control" type="text" name="phone" placeholder="+8801000000000">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                        <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Facebook ID</span>
+                        <input class="form-control" type="text" name="fbLink" placeholder="exmple: facebook.com/amanullah.naim">
+                        <span class="focus-input100"></span>
+                    </div>
+                     <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Profile Picture Link</span>
+                        <input class="form-control" type="text" name="pplink" placeholder="Facebook Profile picture link or google drive link">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                        <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Titles</span>
+                        <input class="form-control" type="text" name="titles" placeholder="exmple: assistance professor">
+                        <span class="focus-input100"></span>
+                    </div>
+                        <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Expertise</span>
+                        <input class="form-control" type="text" name="expertise" placeholder="exmple: physics ">
+                        <span class="focus-input100"></span>
+                    </div>
+                        <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Graduated From</span>
+                        <input class="form-control" type="text" name="graduatedFrom" placeholder="">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                        <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Address</span>
+                        <input class="form-control" type="text" name="address" placeholder="exmple: Dhaka">
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                        <span class="label-input100">Password</span>
+                        <input class="form-control" type="Password" name="password" placeholder="*************">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
+                        <span class="label-input100">Repeat Password</span>
+                        <input class="form-control" type="Password" name="password2" placeholder="*************">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="flex-m w-full p-b-33">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                <span class="txt1">
+                                    I agree to the
+                                    <a href="#" class="txt2 hov1">
+                                        Terms of User
+                                    </a>
+                                </span>
+                            </label>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" type="submit" name="submit">
+                                Sign Up
+                            </button>
+                        </div>
+
+                        <p>Already have an account?<a href="/login" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+                            Sign in
+                            <i class="fa fa-long-arrow-right m-l-5"></i>
+                        </a></p>
+                    </div>
+                </form>
+ 
+    
+<div class="footer">
+      <div class="container">
+        
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright ©<script>document.write(new Date().getFullYear());</script>201920192019 All rights reserved <i class="icon-heart text-danger" aria-hidden="true"></i> Hasib
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+
+
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
